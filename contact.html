@@ -421,6 +421,62 @@
       padding-right: 2.5rem;
     }
 
+    /* Day picker */
+    .day-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .day-picker input[type="checkbox"] {
+      display: none;
+    }
+
+    .day-picker label {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--border-navy);
+      border-radius: 20px;
+      background: var(--cream-white);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      margin-bottom: 0;
+    }
+
+    .day-picker input[type="checkbox"]:checked + label {
+      background: var(--navy);
+      color: var(--cream);
+      border-color: var(--navy);
+    }
+
+    .day-picker label:hover {
+      border-color: var(--rose);
+      color: var(--navy);
+    }
+
+    /* Time range row */
+    .time-range-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .time-range-row select {
+      flex: 1;
+    }
+
+    .time-range-sep {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
     .btn {
       font-family: var(--font-body);
       font-size: 0.95rem;
@@ -1228,13 +1284,56 @@
             </div>
 
             <div class="form-group">
-              <label for="bestTime">Best Time to Reach You</label>
-              <select name="bestTime" id="bestTime">
-                <option value="Anytime" selected>Anytime during business hours</option>
-                <option value="Morning">Morning (8am - 12pm)</option>
-                <option value="Afternoon">Afternoon (12pm - 5pm)</option>
-                <option value="Evening">Evening (5pm - 7pm)</option>
-              </select>
+              <label>Best Day(s) to Reach You</label>
+              <div class="day-picker">
+                <input type="checkbox" name="reachDay" id="day-mon" value="Monday">
+                <label for="day-mon">Mon</label>
+                <input type="checkbox" name="reachDay" id="day-tue" value="Tuesday">
+                <label for="day-tue">Tue</label>
+                <input type="checkbox" name="reachDay" id="day-wed" value="Wednesday">
+                <label for="day-wed">Wed</label>
+                <input type="checkbox" name="reachDay" id="day-thu" value="Thursday">
+                <label for="day-thu">Thu</label>
+                <input type="checkbox" name="reachDay" id="day-fri" value="Friday">
+                <label for="day-fri">Fri</label>
+                <input type="checkbox" name="reachDay" id="day-sat" value="Saturday">
+                <label for="day-sat">Sat</label>
+                <input type="checkbox" name="reachDay" id="day-sun" value="Sunday">
+                <label for="day-sun">Sun</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Best Time Range to Reach You</label>
+              <div class="time-range-row">
+                <select name="reachTimeFrom" id="reachTimeFrom">
+                  <option value="8:00 AM">8:00 AM</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="6:00 PM">6:00 PM</option>
+                </select>
+                <span class="time-range-sep">to</span>
+                <select name="reachTimeTo" id="reachTimeTo">
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="3:00 PM">3:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="5:00 PM">5:00 PM</option>
+                  <option value="6:00 PM">6:00 PM</option>
+                  <option value="7:00 PM" selected>7:00 PM</option>
+                </select>
+              </div>
             </div>
 
             <input type="hidden" name="_subject" value="New Grandnanny Consultation Request">
