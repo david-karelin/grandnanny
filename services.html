@@ -257,6 +257,274 @@
       .process-steps { grid-template-columns: 1fr; gap: 2.5rem; }
     }
 
+    /* ─── SPEAK TO SPECIALIST MODAL ─── */
+    .specialist-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 23, 59, 0.6);
+      z-index: 9998;
+      animation: fadeIn 0.25s ease;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .specialist-modal-overlay.open { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUpModal {
+      from { opacity: 0; transform: translateY(20px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .specialist-modal {
+      background: var(--cream-white);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(20, 23, 59, 0.3);
+      animation: slideUpModal 0.4s ease;
+      position: relative;
+    }
+
+    .specialist-modal-header {
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 100%);
+      padding: 2rem 2rem 1.75rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .specialist-modal-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.003) 2px, rgba(255,255,255,0.003) 4px);
+      pointer-events: none;
+    }
+
+    .specialist-modal-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--navy-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(139, 171, 158, 0.2);
+    }
+
+    .specialist-modal-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--rose);
+    }
+
+    .specialist-modal-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+      position: relative;
+      z-index: 1;
+      line-height: 1.3;
+    }
+
+    .specialist-modal-header p {
+      font-size: 0.88rem;
+      color: var(--rose-light);
+      opacity: 0.85;
+      position: relative;
+      z-index: 1;
+    }
+
+    .specialist-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 50%;
+      color: var(--cream);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+
+    .specialist-modal-close:hover { background: rgba(255, 255, 255, 0.2); }
+
+    .specialist-modal-body {
+      padding: 2rem;
+    }
+
+    .specialist-modal-body .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.1rem;
+    }
+
+    .specialist-modal-body label {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--navy);
+      letter-spacing: 0.03em;
+      margin-bottom: 0.4rem;
+    }
+
+    .specialist-modal-body label .required {
+      color: var(--warm-accent);
+      margin-left: 0.15rem;
+    }
+
+    .specialist-modal-body input,
+    .specialist-modal-body textarea {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-navy);
+      border-radius: 8px;
+      background: var(--cream-light);
+      color: var(--text-body);
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+
+    .specialist-modal-body input:focus,
+    .specialist-modal-body textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px var(--rose-glow);
+    }
+
+    .specialist-modal-body textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .specialist-modal-body input::placeholder,
+    .specialist-modal-body textarea::placeholder {
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    .specialist-submit-btn {
+      width: 100%;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      padding: 1.05rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .specialist-submit-btn:hover {
+      background: var(--navy-mid);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(42, 47, 102, 0.25);
+    }
+
+    .specialist-modal-note {
+      text-align: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    .specialist-modal-success {
+      display: none;
+      text-align: center;
+      padding: 1rem 0 0.5rem;
+    }
+
+    .specialist-modal-success.show { display: block; }
+
+    .specialist-success-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--navy-deep);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .specialist-success-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--rose);
+    }
+
+    .specialist-modal-success h4 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .specialist-modal-success p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* Call alternative inside modal */
+    .specialist-or-call {
+      text-align: center;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .specialist-or-call a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .specialist-or-call a:hover { color: var(--rose); }
+
+    @media (max-width: 500px) {
+      .specialist-modal-header { padding: 1.5rem 1.5rem 1.25rem; }
+      .specialist-modal-body { padding: 1.5rem; }
+      .specialist-modal-header h3 { font-size: 1.4rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -492,17 +760,106 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-  <!-- TAWK.TO LIVE CHAT -->
-  <!-- Sign up for FREE at tawk.to, then paste your unique ID below -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/69e0abfa5c2d651c357d0026/1jmapvifm';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
+
+  <!-- SPEAK WITH A CARE SPECIALIST MODAL -->
+  <div class="specialist-modal-overlay" id="specialistModalOverlay" onclick="if(event.target===this)closeSpecialistModal()">
+    <div class="specialist-modal">
+      <div class="specialist-modal-header">
+        <button class="specialist-modal-close" onclick="closeSpecialistModal()" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="specialist-modal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+          </svg>
+        </div>
+        <h3>Speak With a Care Specialist</h3>
+        <p>Ask us anything — we typically respond within a few hours</p>
+      </div>
+      <div class="specialist-modal-body">
+        <div id="specialistFormContainer">
+          <form id="specialistForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="specialistName">Your Name <span class="required">*</span></label>
+              <input type="text" name="name" id="specialistName" placeholder="First and last name" required>
+            </div>
+            <div class="form-group">
+              <label for="specialistEmail">Email or Phone <span class="required">*</span></label>
+              <input type="text" name="contact" id="specialistEmail" placeholder="email@example.com or (123) 456-7890" required>
+            </div>
+            <div class="form-group">
+              <label for="specialistQuestion">Your Question <span class="required">*</span></label>
+              <textarea name="question" id="specialistQuestion" placeholder="Ask us anything — we're here to help. (e.g., What services do you offer? Do you cover my area?)" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Grandnanny — Speak With a Specialist">
+            <button type="submit" class="specialist-submit-btn">
+              Send My Question
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+            <p class="specialist-modal-note">We typically reply within a few hours during business hours.</p>
+          </form>
+          <div class="specialist-or-call">
+            Prefer to call? <a href="tel:+1234567890">(123) 456-7890</a>
+          </div>
+        </div>
+        <div class="specialist-modal-success" id="specialistSuccess">
+          <div class="specialist-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+          <h4>Message Sent!</h4>
+          <p>Thank you — a senior care specialist will get back to you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openSpecialistModal() {
+      document.getElementById('specialistModalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const el = document.getElementById('specialistName');
+        if (el) el.focus();
+      }, 300);
+    }
+    function closeSpecialistModal() {
+      document.getElementById('specialistModalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSpecialistModal();
+    });
+    (function() {
+      const form = document.getElementById('specialistForm');
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+              document.getElementById('specialistFormContainer').style.display = 'none';
+              document.getElementById('specialistSuccess').classList.add('show');
+            } else {
+              alert('Something went wrong. Please call us directly at (123) 456-7890.');
+            }
+          } catch (error) {
+            alert('Something went wrong. Please call us directly at (123) 456-7890.');
+          }
+        });
+      }
     })();
   </script>
 
