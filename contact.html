@@ -459,22 +459,65 @@
       color: var(--navy);
     }
 
-    /* Time range row */
-    .time-range-row {
+    /* Time block picker */
+    .time-block-grid {
       display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      flex-wrap: wrap;
+      gap: 0.35rem;
     }
 
-    .time-range-row select {
-      flex: 1;
-    }
-
-    .time-range-sep {
-      font-size: 0.85rem;
+    .time-block {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.45rem 0.7rem;
+      border: 1px solid var(--border-navy);
+      border-radius: 6px;
+      background: var(--cream-white);
       color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
       white-space: nowrap;
-      flex-shrink: 0;
+    }
+
+    .time-block:hover {
+      border-color: var(--rose);
+      color: var(--navy);
+    }
+
+    .time-block.tb-start,
+    .time-block.tb-end {
+      background: var(--navy);
+      color: var(--cream);
+      border-color: var(--navy);
+    }
+
+    .time-block.tb-range {
+      background: rgba(42, 47, 102, 0.1);
+      color: var(--navy);
+      border-color: rgba(42, 47, 102, 0.25);
+    }
+
+    .time-range-label {
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+      min-height: 1.2em;
+    }
+
+    .time-range-label span {
+      color: var(--navy);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .time-block-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
     }
 
     .btn {
@@ -1251,7 +1294,7 @@
         </div>
 
         <div id="consultationForm">
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+          <form action="https://formspree.io/f/xpqodjqr" method="POST" id="contactForm">
 
             <div class="form-group">
               <label for="name">Your Name <span class="required">*</span></label>
@@ -1305,35 +1348,10 @@
 
             <div class="form-group">
               <label>Best Time Range to Reach You</label>
-              <div class="time-range-row">
-                <select name="reachTimeFrom" id="reachTimeFrom">
-                  <option value="8:00 AM">8:00 AM</option>
-                  <option value="9:00 AM">9:00 AM</option>
-                  <option value="10:00 AM">10:00 AM</option>
-                  <option value="11:00 AM">11:00 AM</option>
-                  <option value="12:00 PM">12:00 PM</option>
-                  <option value="1:00 PM">1:00 PM</option>
-                  <option value="2:00 PM">2:00 PM</option>
-                  <option value="3:00 PM">3:00 PM</option>
-                  <option value="4:00 PM">4:00 PM</option>
-                  <option value="5:00 PM">5:00 PM</option>
-                  <option value="6:00 PM">6:00 PM</option>
-                </select>
-                <span class="time-range-sep">to</span>
-                <select name="reachTimeTo" id="reachTimeTo">
-                  <option value="9:00 AM">9:00 AM</option>
-                  <option value="10:00 AM">10:00 AM</option>
-                  <option value="11:00 AM">11:00 AM</option>
-                  <option value="12:00 PM">12:00 PM</option>
-                  <option value="1:00 PM">1:00 PM</option>
-                  <option value="2:00 PM">2:00 PM</option>
-                  <option value="3:00 PM">3:00 PM</option>
-                  <option value="4:00 PM">4:00 PM</option>
-                  <option value="5:00 PM">5:00 PM</option>
-                  <option value="6:00 PM">6:00 PM</option>
-                  <option value="7:00 PM" selected>7:00 PM</option>
-                </select>
-              </div>
+              <p class="time-block-hint">Click a start time, then an end time</p>
+              <div class="time-block-grid" id="timeBlockGrid"></div>
+              <div class="time-range-label" id="timeRangeLabel">No preference selected</div>
+              <input type="hidden" name="preferredTimeRange" id="preferredTimeRange" value="No preference">
             </div>
 
             <input type="hidden" name="_subject" value="New Grandnanny Consultation Request">
@@ -1460,6 +1478,62 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Time block picker
+    (function() {
+      const times = ['8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM'];
+      const grid = document.getElementById('timeBlockGrid');
+      const label = document.getElementById('timeRangeLabel');
+      const hidden = document.getElementById('preferredTimeRange');
+      let startIdx = null, endIdx = null;
+
+      times.forEach(function(t, i) {
+        const el = document.createElement('div');
+        el.className = 'time-block';
+        el.textContent = t;
+        el.dataset.idx = i;
+        el.addEventListener('click', function() {
+          if (startIdx === null) {
+            startIdx = i;
+            render();
+          } else if (endIdx === null) {
+            if (i === startIdx) { startIdx = null; render(); return; }
+            if (i < startIdx) { startIdx = i; render(); return; }
+            endIdx = i;
+            render();
+          } else {
+            startIdx = i; endIdx = null;
+            render();
+          }
+        });
+        grid.appendChild(el);
+      });
+
+      function render() {
+        const blocks = grid.querySelectorAll('.time-block');
+        blocks.forEach(function(b, i) {
+          b.classList.remove('tb-start','tb-end','tb-range');
+          if (startIdx !== null && endIdx !== null) {
+            if (i === startIdx) b.classList.add('tb-start');
+            else if (i === endIdx) b.classList.add('tb-end');
+            else if (i > startIdx && i < endIdx) b.classList.add('tb-range');
+          } else if (startIdx !== null && i === startIdx) {
+            b.classList.add('tb-start');
+          }
+        });
+        if (startIdx !== null && endIdx !== null) {
+          var val = times[startIdx] + ' – ' + times[endIdx];
+          label.innerHTML = 'Selected: <span>' + val + '</span>';
+          hidden.value = val;
+        } else if (startIdx !== null) {
+          label.innerHTML = 'Start: <span>' + times[startIdx] + '</span> — now pick an end time';
+          hidden.value = 'No preference';
+        } else {
+          label.innerHTML = 'No preference selected';
+          hidden.value = 'No preference';
+        }
+      }
+    })();
+
     // Form submission
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async function(e) {
@@ -1502,7 +1576,7 @@
       </div>
       <div class="specialist-modal-body">
         <div id="specialistFormContainer">
-          <form id="specialistForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form id="specialistForm" action="https://formspree.io/f/xpqodjqr" method="POST">
             <div class="form-group">
               <label for="specialistName">Your Name <span class="required">*</span></label>
               <input type="text" name="name" id="specialistName" placeholder="First and last name" required>
