@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — Grandnanny | Book a Free In-Home Consultation</title>
-  <meta name="description" content="Book a free consultation with Grandnanny. Speak with a care specialist about premium in-home senior care for your loved one across Ontario.">
+  <title>Book Your Free In-Home Visit — Grandnanny</title>
+  <meta name="description" content="Book a free in-home consultation with Grandnanny. Takes 30 seconds. A care specialist will reach out within 24 hours.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #3D5A5B;
-      --navy-deep: #2E4748;
-      --navy-darker: #243B3C;
-      --navy-mid: #4E6D6E;
+      --navy: #2A2F66;
+      --navy-deep: #1C204F;
+      --navy-darker: #14173B;
+      --navy-mid: #3A4080;
       --rose: #8BAB9E;
       --rose-light: #A3BFB4;
       --rose-pale: #C8DAD1;
@@ -23,14 +23,14 @@
       --cream: #EFF2F0;
       --cream-light: #F5F7F6;
       --cream-white: #FAFBFA;
-      --text-dark: #2E4748;
+      --text-dark: #1C204F;
       --text-body: #4A5E5F;
       --text-muted: #7A8E8F;
       --text-on-dark: #DDE5E2;
       --border-light: rgba(139, 171, 158, 0.25);
-      --border-navy: rgba(61, 90, 91, 0.1);
-      --shadow-soft: 0 4px 30px rgba(46, 71, 72, 0.06);
-      --shadow-medium: 0 8px 40px rgba(46, 71, 72, 0.1);
+      --border-navy: rgba(42, 47, 102, 0.1);
+      --shadow-soft: 0 4px 30px rgba(28, 32, 79, 0.06);
+      --shadow-medium: 0 8px 40px rgba(28, 32, 79, 0.1);
       --warm-accent: #B8936A;
       --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Lora', Georgia, serif;
@@ -52,7 +52,7 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(253, 251, 248, 0.92);
+      background: rgba(250, 251, 250, 0.92);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-navy);
@@ -80,7 +80,7 @@
       background: var(--navy);
       border-radius: 50%;
       padding: 5px;
-      box-shadow: 0 2px 8px rgba(46, 71, 72, 0.2);
+      box-shadow: 0 2px 8px rgba(28, 32, 79, 0.2);
     }
 
     .nav-logo-text {
@@ -148,7 +148,7 @@
 
     /* ─── PAGE HERO ─── */
     .page-hero {
-      padding: 10rem 2rem 5rem;
+      padding: 9rem 2rem 4rem;
       background: linear-gradient(160deg, var(--navy-darker) 0%, var(--navy-deep) 40%, var(--navy) 100%);
       text-align: center;
       position: relative;
@@ -203,7 +203,7 @@
       font-weight: 400;
       color: var(--cream);
       line-height: 1.2;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .page-hero h1 em { font-style: italic; color: var(--rose-light); }
@@ -219,7 +219,7 @@
 
     /* ─── CONTACT SECTION ─── */
     .contact-section {
-      padding: 6rem 2rem;
+      padding: 5rem 2rem;
       background: var(--cream-white);
     }
 
@@ -227,7 +227,7 @@
       max-width: 1050px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.3fr;
       gap: 4rem;
       align-items: start;
     }
@@ -253,7 +253,7 @@
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
     }
 
     .contact-detail-icon {
@@ -294,24 +294,25 @@
 
     .contact-detail-text a:hover { color: var(--rose); }
 
-    .contact-hours {
-      margin-top: 2.5rem;
+    .contact-info-trust {
+      margin-top: 2rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border-light);
     }
 
-    .contact-hours h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
+    .trust-point {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-body);
     }
 
-    .contact-hours p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.7;
+    .trust-point svg {
+      width: 18px; height: 18px;
+      color: var(--rose);
+      flex-shrink: 0;
     }
 
     /* ── Right: Form ── */
@@ -323,50 +324,73 @@
       box-shadow: var(--shadow-soft);
     }
 
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
     .contact-form-card h3 {
       font-family: var(--font-display);
-      font-size: 1.6rem;
+      font-size: 1.75rem;
       font-weight: 500;
       color: var(--navy);
       margin-bottom: 0.5rem;
     }
 
     .contact-form-card .form-subtitle {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+    .form-time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--rose-glow);
+      color: var(--navy);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
       margin-bottom: 1rem;
+      border: 1px solid var(--rose-pale);
+    }
+
+    .form-time-badge svg {
+      width: 13px; height: 13px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
     .form-group label {
       font-family: var(--font-body);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 500;
       color: var(--navy);
       letter-spacing: 0.03em;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group label .required {
+      color: var(--warm-accent);
+      margin-left: 0.15rem;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       font-family: var(--font-body);
-      font-size: 0.9rem;
-      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      padding: 1rem 1.1rem;
       border: 1px solid var(--border-navy);
-      border-radius: 6px;
+      border-radius: 8px;
       background: var(--cream-white);
       color: var(--text-body);
       transition: border-color 0.3s, box-shadow 0.3s;
@@ -386,17 +410,12 @@
       opacity: 0.5;
     }
 
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
     .form-group select {
       cursor: pointer;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6F94' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237A8E8F' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 1rem center;
       padding-right: 2.5rem;
@@ -404,27 +423,31 @@
 
     .btn {
       font-family: var(--font-body);
-      font-size: 0.88rem;
-      letter-spacing: 0.05em;
-      padding: 1rem 2.2rem;
-      border-radius: 4px;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      padding: 1.15rem 2rem;
+      border-radius: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
       cursor: pointer;
       border: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
 
-    .btn-navy { background: var(--navy); color: var(--cream); }
-    .btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(43,48,104,0.2); }
-
-    .form-submit {
+    .btn-navy {
+      background: var(--navy);
+      color: var(--cream);
       width: 100%;
-      justify-content: center;
       margin-top: 0.5rem;
-      font-size: 0.92rem;
-      padding: 1.1rem;
+    }
+
+    .btn-navy:hover {
+      background: var(--navy-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(42, 47, 102, 0.2);
     }
 
     .form-note {
@@ -432,10 +455,55 @@
       color: var(--text-muted);
       text-align: center;
       margin-top: 1rem;
-      opacity: 0.7;
+      opacity: 0.8;
+      line-height: 1.6;
     }
 
-    /* Success message (hidden by default) */
+    .form-or-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.75rem 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .form-or-divider::before,
+    .form-or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .call-direct-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem;
+      background: var(--cream-white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .call-direct-btn:hover {
+      border-color: var(--rose);
+      background: var(--rose-glow);
+      transform: translateY(-1px);
+    }
+
+    .call-direct-btn svg {
+      width: 18px; height: 18px;
+      color: var(--rose);
+    }
+
+    /* Success state */
     .form-success {
       display: none;
       text-align: center;
@@ -445,7 +513,7 @@
     .form-success.show { display: block; }
 
     .form-success-icon {
-      width: 60px; height: 60px;
+      width: 70px; height: 70px;
       background: var(--navy-deep);
       border-radius: 50%;
       display: flex;
@@ -455,22 +523,63 @@
     }
 
     .form-success-icon svg {
-      width: 28px; height: 28px;
+      width: 34px; height: 34px;
       color: var(--rose);
     }
 
     .form-success h3 {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 500;
       color: var(--navy);
       margin-bottom: 0.75rem;
     }
 
     .form-success p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
+      font-size: 0.95rem;
+      color: var(--text-body);
       line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success .next-steps {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      text-align: left;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-success .next-steps h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .form-success .next-steps .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-body);
+    }
+
+    .form-success .next-steps .step-num {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--rose);
+      color: var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: var(--font-display);
     }
 
     /* ─── FOOTER ─── */
@@ -501,18 +610,44 @@
 
     .footer-brand-logo {
       height: 50px; width: 50px;
-      object-fit: cover;
+      object-fit: contain;
+      background: var(--navy);
+      border-radius: 50%;
+      padding: 5px;
       align-self: flex-start;
-      border-radius: 6px;
     }
 
-    .footer-brand p { font-size: 0.88rem; color: var(--text-on-dark); line-height: 1.7; max-width: 280px; opacity: 0.6; }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--text-on-dark);
+      line-height: 1.7;
+      max-width: 280px;
+      opacity: 0.6;
+    }
 
-    .footer-col h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--cream); margin-bottom: 1rem; }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
     .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 0.5rem; }
-    .footer-col a { font-size: 0.88rem; color: var(--text-on-dark); text-decoration: none; opacity: 0.55; transition: all 0.3s ease; }
-    .footer-col a:hover { color: var(--rose-light); opacity: 1; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--text-on-dark);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--rose-light);
+      opacity: 1;
+    }
 
     .footer-bottom {
       max-width: 1100px;
@@ -527,7 +662,255 @@
       opacity: 0.5;
     }
 
-    .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--rose); opacity: 1; }
+    .footer-tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--rose);
+      opacity: 1;
+    }
+
+    /* ─── STICKY MOBILE CTA BAR ─── */
+    .sticky-mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--cream-white);
+      border-top: 1px solid var(--border-light);
+      padding: 0.75rem 1rem;
+      z-index: 9990;
+      box-shadow: 0 -4px 20px rgba(28, 32, 79, 0.08);
+      gap: 0.6rem;
+    }
+
+    .sticky-mobile-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .sticky-mobile-bar .btn-call {
+      background: var(--cream-light);
+      color: var(--navy);
+      border: 1px solid var(--border-navy);
+    }
+
+    .sticky-mobile-bar .btn-book {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    .sticky-mobile-bar svg { width: 16px; height: 16px; }
+
+    /* ─── CHAT WIDGET ─── */
+    .chat-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 32, 79, 0.5);
+      z-index: 9998;
+    }
+
+    .chat-overlay.open { display: block; }
+
+    .chat-widget {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 400px;
+      max-height: 560px;
+      background: var(--cream-white);
+      border-radius: 16px;
+      box-shadow: 0 12px 48px rgba(28, 32, 79, 0.2);
+      z-index: 9999;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-widget.open { display: flex; }
+
+    .chat-header {
+      background: var(--navy);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-header-info { display: flex; align-items: center; gap: 0.75rem; }
+
+    .chat-avatar {
+      width: 36px; height: 36px;
+      background: var(--navy-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chat-avatar svg { width: 18px; height: 18px; color: var(--rose); }
+
+    .chat-header-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .chat-header-text p {
+      font-size: 0.7rem;
+      color: var(--rose-light);
+      opacity: 0.8;
+    }
+
+    .chat-close {
+      background: none; border: none; color: var(--cream);
+      cursor: pointer; padding: 4px; opacity: 0.7;
+    }
+    .chat-close:hover { opacity: 1; }
+
+    .chat-messages {
+      flex: 1;
+      padding: 1.25rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-height: 320px;
+      min-height: 220px;
+    }
+
+    .chat-msg {
+      max-width: 82%;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .chat-msg.agent {
+      background: var(--cream-light);
+      color: var(--text-body);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-msg.user {
+      background: var(--navy);
+      color: var(--cream);
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-msg .msg-time {
+      font-size: 0.68rem;
+      opacity: 0.5;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .chat-quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0 1.25rem 0.5rem;
+    }
+
+    .chat-quick-reply {
+      padding: 0.5rem 0.9rem;
+      background: var(--cream-light);
+      border: 1px solid var(--border-navy);
+      border-radius: 16px;
+      font-size: 0.78rem;
+      color: var(--navy);
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .chat-quick-reply:hover {
+      background: var(--rose-glow);
+      border-color: var(--rose);
+    }
+
+    .chat-input-area {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid var(--border-navy);
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .chat-input {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border-navy);
+      border-radius: 24px;
+      background: var(--cream-light);
+      color: var(--text-body);
+      outline: none;
+    }
+
+    .chat-input:focus { border-color: var(--rose); }
+
+    .chat-send {
+      width: 38px; height: 38px;
+      background: var(--navy);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .chat-send:hover { background: var(--navy-mid); }
+    .chat-send svg { width: 18px; height: 18px; color: var(--cream); }
+
+    .chat-typing {
+      display: none;
+      align-self: flex-start;
+      padding: 0.75rem 1rem;
+      background: var(--cream-light);
+      border-radius: 12px;
+      border-bottom-left-radius: 4px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .chat-typing.show { display: block; }
+
+    .chat-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px; height: 60px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9997;
+      box-shadow: 0 4px 20px rgba(28, 32, 79, 0.25);
+      border: none;
+    }
+
+    .chat-fab:hover { background: var(--navy-mid); }
+    .chat-fab.hidden { display: none; }
+    .chat-fab svg { width: 26px; height: 26px; color: var(--cream); }
 
     /* ─── SCROLL REVEAL ─── */
     .reveal {
@@ -563,264 +946,26 @@
 
       .nav-links.open { display: flex; }
       .nav-toggle { display: flex; }
-      .page-hero { padding: 8rem 1.5rem 3.5rem; }
-
-      .form-row { grid-template-columns: 1fr; }
+      .page-hero { padding: 8rem 1.5rem 3rem; }
 
       .contact-form-card { padding: 2rem 1.5rem; }
 
       .footer-inner { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
-    }
 
-    /* ─── HIGHLIGHTED KEYWORDS ─── */
-    .highlight-word {
-      font-style: normal;
-      color: var(--warm-accent);
-      font-weight: 500;
-      position: relative;
-    }
+      .sticky-mobile-bar { display: flex; }
+      body { padding-bottom: 70px; }
 
-    .highlight-word::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--warm-accent);
-      opacity: 0.3;
-    }
-
-    /* ─── CHAT WIDGET ─── */
-    .chat-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(34, 45, 33, 0.5);
-      z-index: 9998;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .chat-overlay.open { display: block; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .chat-widget {
-      display: none;
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 400px;
-      max-height: 560px;
-      background: var(--cream-white);
-      border-radius: 16px;
-      box-shadow: 0 12px 48px rgba(46, 71, 72, 0.2);
-      z-index: 9999;
-      flex-direction: column;
-      overflow: hidden;
-      animation: slideUp 0.4s ease;
-    }
-
-    .chat-widget.open { display: flex; }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .chat-header {
-      background: var(--navy);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .chat-header-info {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .chat-avatar {
-      width: 36px; height: 36px;
-      background: var(--navy-mid);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .chat-avatar svg {
-      width: 18px; height: 18px;
-      color: var(--rose);
-    }
-
-    .chat-header-text h4 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      color: var(--cream);
-      font-weight: 500;
-    }
-
-    .chat-header-text p {
-      font-size: 0.7rem;
-      color: var(--rose-light);
-      opacity: 0.8;
-    }
-
-    .chat-close {
-      background: none;
-      border: none;
-      color: var(--cream);
-      cursor: pointer;
-      padding: 4px;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    .chat-close:hover { opacity: 1; }
-
-    .chat-messages {
-      flex: 1;
-      padding: 1.25rem;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-height: 350px;
-      min-height: 250px;
-    }
-
-    .chat-msg {
-      max-width: 82%;
-      padding: 0.75rem 1rem;
-      border-radius: 12px;
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
-
-    .chat-msg.agent {
-      background: var(--cream-light);
-      color: var(--text-body);
-      align-self: flex-start;
-      border-bottom-left-radius: 4px;
-    }
-
-    .chat-msg.user {
-      background: var(--navy);
-      color: var(--cream);
-      align-self: flex-end;
-      border-bottom-right-radius: 4px;
-    }
-
-    .chat-msg .msg-time {
-      font-size: 0.68rem;
-      opacity: 0.5;
-      margin-top: 4px;
-      display: block;
-    }
-
-    .chat-input-area {
-      padding: 1rem 1.25rem;
-      border-top: 1px solid var(--border-navy);
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .chat-input {
-      flex: 1;
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      padding: 0.7rem 1rem;
-      border: 1px solid var(--border-navy);
-      border-radius: 24px;
-      background: var(--cream-light);
-      color: var(--text-body);
-      outline: none;
-      transition: border-color 0.3s;
-    }
-
-    .chat-input:focus {
-      border-color: var(--rose);
-    }
-
-    .chat-input::placeholder {
-      color: var(--text-muted);
-      opacity: 0.5;
-    }
-
-    .chat-send {
-      width: 38px; height: 38px;
-      background: var(--navy);
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s;
-      flex-shrink: 0;
-    }
-
-    .chat-send:hover { background: var(--navy-mid); }
-
-    .chat-send svg {
-      width: 18px; height: 18px;
-      color: var(--cream);
-    }
-
-    .chat-typing {
-      display: none;
-      align-self: flex-start;
-      padding: 0.75rem 1rem;
-      background: var(--cream-light);
-      border-radius: 12px;
-      border-bottom-left-radius: 4px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    .chat-typing.show { display: block; }
-
-    /* Chat FAB */
-    .chat-fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px; height: 60px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 9997;
-      box-shadow: 0 4px 20px rgba(46, 71, 72, 0.25);
-      transition: transform 0.3s, background 0.3s;
-      border: none;
-    }
-
-    .chat-fab:hover { transform: scale(1.08); background: var(--navy-mid); }
-    .chat-fab.hidden { display: none; }
-
-    .chat-fab svg {
-      width: 26px; height: 26px;
-      color: var(--cream);
+      .chat-fab { bottom: 78px; right: 16px; width: 50px; height: 50px; }
+      .chat-fab svg { width: 22px; height: 22px; }
     }
 
     @media (max-width: 500px) {
       .chat-widget {
         width: calc(100% - 16px);
         right: 8px;
-        bottom: 8px;
-        max-height: 85vh;
+        bottom: 78px;
+        max-height: 75vh;
       }
     }
   </style>
@@ -842,7 +987,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="why-us.html">Why Us</a></li>
-        <li><a href="contact.html" class="nav-cta active">Book a Consultation</a></li>
+        <li><a href="contact.html" class="nav-cta active">Book a Visit</a></li>
       </ul>
     </div>
   </nav>
@@ -852,8 +997,8 @@
     <div class="page-hero-circle"></div>
     <div class="page-hero-content">
       <p class="section-label">Get in Touch</p>
-      <h1>Let's Talk About the Care Your Loved One <em>Deserves</em></h1>
-      <p>Whether you're ready to get started or simply have questions, we're here to help. Every conversation begins with listening — and every consultation happens in the comfort of your home.</p>
+      <h1>Book Your Free <em>In-Home Visit</em></h1>
+      <p>Takes just 30 seconds. A care specialist will call you within 24 hours to arrange a time that works for your family.</p>
     </div>
   </section>
 
@@ -864,7 +1009,7 @@
       <!-- Left: Contact Info -->
       <div class="contact-info reveal">
         <h2>We're Here for Your Family</h2>
-        <p>Reach out to us by phone, email, or through the consultation form. There's no obligation — just a warm conversation about how we can help.</p>
+        <p>Whether you're ready to get started or simply have questions, we're here to listen. Reach out however feels most comfortable.</p>
 
         <div class="contact-detail">
           <div class="contact-detail-icon">
@@ -873,7 +1018,7 @@
             </svg>
           </div>
           <div class="contact-detail-text">
-            <h4>Call Us</h4>
+            <h4>Call Us Directly</h4>
             <p><a href="tel:+1234567890">(123) 456-7890</a></p>
           </div>
         </div>
@@ -900,72 +1045,88 @@
           </div>
           <div class="contact-detail-text">
             <h4>Serving</h4>
-            <p>Families across Ontario, Canada</p>
+            <p>Families across Ontario</p>
           </div>
         </div>
 
-        <div class="contact-hours">
-          <h4>Office Hours</h4>
-          <p>Monday – Friday: 8:00 AM – 7:00 PM</p>
-          <p>Saturday: 9:00 AM – 4:00 PM</p>
-          <p>Sunday: Closed (emergency line available)</p>
+        <div class="contact-info-trust">
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Free in-home consultation
+          </div>
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            No obligation, no pressure
+          </div>
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Response within 24 hours
+          </div>
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            100% confidential
+          </div>
         </div>
       </div>
 
-      <!-- Right: Form -->
+      <!-- Right: Form (reduced friction) -->
       <div class="contact-form-card reveal">
-        <h3>Book a Free In-Home Consultation</h3>
-        <p class="form-subtitle">Tell us a little about your situation, and a care specialist will reach out within 24 hours to arrange a free in-home consultation.</p>
+        <div class="form-header">
+          <div class="form-time-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Takes 30 seconds
+          </div>
+          <h3>Request Your Free Visit</h3>
+          <p class="form-subtitle">Just your name and a way to reach you. We'll handle the rest.</p>
+        </div>
 
         <div id="consultationForm">
           <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
-          <div class="form-row">
+
             <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" id="firstName" placeholder="Your first name" required>
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" name="name" id="name" placeholder="First and last name" required>
             </div>
+
             <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" id="lastName" placeholder="Your last name" required>
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" name="phone" id="phone" placeholder="(123) 456-7890" required>
             </div>
-          </div>
 
-          <div class="form-row">
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="your@email.com" required>
+              <label for="bestTime">Best Time to Call You</label>
+              <select name="bestTime" id="bestTime">
+                <option value="Anytime" selected>Anytime during business hours</option>
+                <option value="Morning">Morning (8am - 12pm)</option>
+                <option value="Afternoon">Afternoon (12pm - 5pm)</option>
+                <option value="Evening">Evening (5pm - 7pm)</option>
+              </select>
             </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" name="phone" id="phone" placeholder="(123) 456-7890">
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label for="careType">Type of Care Needed</label>
-            <select name="careType" id="careType">
-              <option value="" disabled selected>Select a service...</option>
-              <option value="Personal Care">Personal Care</option>
-              <option value="Companionship">Companionship</option>
-              <option value="Specialized Care">Specialized Care</option>
-              <option value="Respite Care">Respite Care</option>
-              <option value="Not sure yet">Not sure yet — I'd like guidance</option>
-            </select>
-          </div>
+            <input type="hidden" name="_subject" value="New Grandnanny Consultation Request">
 
-          <div class="form-group">
-            <label for="message">Tell Us About Your Loved One</label>
-            <textarea name="message" id="message" placeholder="Share anything you'd like us to know — their needs, your concerns, or any questions you have. There's no wrong answer."></textarea>
-          </div>
+            <button type="submit" class="btn btn-navy">
+              Request My Free Visit
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
 
-          <input type="hidden" name="_subject" value="New Grandnanny Consultation Request">
-
-          <button type="submit" class="btn btn-navy form-submit">
-            Request a Consultation
-          </button>
-
-          <p class="form-note">No obligation. Completely confidential. We'll respond within 24 hours.</p>
+            <p class="form-note">No commitment. No obligation. We'll reach out within 24 hours.</p>
           </form>
+
+          <div class="form-or-divider">or</div>
+
+          <a href="tel:+1234567890" class="call-direct-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Call (123) 456-7890
+          </a>
         </div>
 
         <div class="form-success" id="formSuccess">
@@ -975,8 +1136,23 @@
               <circle cx="12" cy="12" r="10"/>
             </svg>
           </div>
-          <h3>Thank You</h3>
-          <p>Your consultation request has been received. A care specialist will reach out to you within 24 hours to discuss how we can help your family.</p>
+          <h3>Thank You!</h3>
+          <p>Your request has been received. A care specialist will reach out within 24 hours.</p>
+          <div class="next-steps">
+            <h4>What Happens Next</h4>
+            <div class="step">
+              <div class="step-num">1</div>
+              <div>A care specialist calls you at your preferred time</div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div>We schedule a free in-home visit at your convenience</div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div>We build a personalized care plan for your loved one</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -988,7 +1164,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="logo-icon-transparent.png" alt="Grandnanny" class="footer-brand-logo">
-        <p>Premium in-home senior care across Ontario. Compassion, dignity, and peace of mind for your family.</p>
+        <p>Premium in-home senior care across Ontario, delivered by certified PSWs. Compassion, dignity, and peace of mind for your family.</p>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
@@ -1024,6 +1200,77 @@
     </div>
   </footer>
 
+  <!-- STICKY MOBILE CTA BAR -->
+  <div class="sticky-mobile-bar">
+    <a href="tel:+1234567890" class="btn-call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="contact.html" class="btn-book">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      Book Free Visit
+    </a>
+  </div>
+
+  <!-- CHAT WIDGET -->
+  <button class="chat-fab" onclick="openChat()" aria-label="Chat with us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+  </button>
+
+  <div class="chat-overlay" id="chatOverlay" onclick="closeChat()"></div>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <div class="chat-header-text">
+          <h4>Grandnanny Care Team</h4>
+          <p>We typically reply within minutes</p>
+        </div>
+      </div>
+      <button class="chat-close" onclick="closeChat()" aria-label="Close chat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg agent">
+        Hello! Welcome to Grandnanny. I'm here to help you find the right care for your loved one. What would you like to know?
+        <span class="msg-time">Care Team</span>
+      </div>
+    </div>
+    <div class="chat-typing" id="chatTyping">Care specialist is typing...</div>
+    <div class="chat-quick-replies" id="chatQuickReplies">
+      <button class="chat-quick-reply" onclick="sendQuickReply('What services do you offer?')">What services do you offer?</button>
+      <button class="chat-quick-reply" onclick="sendQuickReply('How much does it cost?')">How much does it cost?</button>
+      <button class="chat-quick-reply" onclick="sendQuickReply('Book a consultation')">Book a consultation</button>
+      <button class="chat-quick-reply" onclick="sendQuickReply('Tell me about your PSWs')">Tell me about your PSWs</button>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendMessage()">
+      <button class="chat-send" onclick="sendMessage()" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <script>
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
@@ -1036,7 +1283,7 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Form submission with Formspree
+    // Form submission
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -1051,12 +1298,86 @@
           document.getElementById('consultationForm').style.display = 'none';
           document.getElementById('formSuccess').classList.add('show');
         } else {
-          alert('Something went wrong. Please try again or call us directly.');
+          alert('Something went wrong. Please call us directly at (123) 456-7890.');
         }
       } catch (error) {
-        alert('Something went wrong. Please try again or call us directly.');
+        alert('Something went wrong. Please call us directly at (123) 456-7890.');
       }
     });
+
+    // Chat widget
+    function openChat() {
+      document.getElementById('chatWidget').classList.add('open');
+      document.getElementById('chatOverlay').classList.add('open');
+      document.querySelector('.chat-fab').classList.add('hidden');
+      document.getElementById('chatInput').focus();
+    }
+
+    function closeChat() {
+      document.getElementById('chatWidget').classList.remove('open');
+      document.getElementById('chatOverlay').classList.remove('open');
+      document.querySelector('.chat-fab').classList.remove('hidden');
+    }
+
+    const replies = {
+      'services': "We offer four types of in-home care, all delivered by certified PSWs: Personal Care, Companionship, Specialized Care, and Respite Care. Would you like details on any of these?",
+      'cost': "Our care plans are fully personalized, so pricing depends on your loved one's needs. We'd love to discuss it during a free in-home consultation. Shall I help you book one?",
+      'consultation': "Wonderful! Just fill out the form on this page — takes only 30 seconds. A care specialist will call you within 24 hours to arrange a time.",
+      'psw': "All our caregivers are certified Personal Support Workers (PSWs) — thoroughly vetted and chosen for compassion as much as skill. We also provide regular follow-ups.",
+      'follow': "We provide regular follow-ups with every family — weekly at first, then adjusted to your preference. We're always here to make sure care stays excellent.",
+      'areas': "We serve families across Ontario. Share your location and we'll confirm coverage!",
+      'default': "Thank you for reaching out! For the best help, I'd recommend filling out our quick form or calling us at (123) 456-7890. How else can I help?"
+    };
+
+    function getReply(msg) {
+      const lower = msg.toLowerCase();
+      if (lower.includes('service') || lower.includes('offer')) return replies.services;
+      if (lower.includes('cost') || lower.includes('price') || lower.includes('how much')) return replies.cost;
+      if (lower.includes('consult') || lower.includes('book') || lower.includes('visit')) return replies.consultation;
+      if (lower.includes('psw') || lower.includes('caregiver') || lower.includes('worker')) return replies.psw;
+      if (lower.includes('follow') || lower.includes('check')) return replies.follow;
+      if (lower.includes('area') || lower.includes('location') || lower.includes('serve')) return replies.areas;
+      return replies.default;
+    }
+
+    function addUserMessage(msg) {
+      const messages = document.getElementById('chatMessages');
+      const userDiv = document.createElement('div');
+      userDiv.className = 'chat-msg user';
+      userDiv.innerHTML = msg + '<span class="msg-time">You</span>';
+      messages.appendChild(userDiv);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function addAgentReply(msg) {
+      const messages = document.getElementById('chatMessages');
+      const typing = document.getElementById('chatTyping');
+      typing.classList.add('show');
+      setTimeout(() => {
+        typing.classList.remove('show');
+        const replyDiv = document.createElement('div');
+        replyDiv.className = 'chat-msg agent';
+        replyDiv.innerHTML = msg + '<span class="msg-time">Care Team</span>';
+        messages.appendChild(replyDiv);
+        messages.scrollTop = messages.scrollHeight;
+      }, 1200 + Math.random() * 600);
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+      addUserMessage(msg);
+      input.value = '';
+      document.getElementById('chatQuickReplies').style.display = 'none';
+      addAgentReply(getReply(msg));
+    }
+
+    function sendQuickReply(msg) {
+      addUserMessage(msg);
+      document.getElementById('chatQuickReplies').style.display = 'none';
+      addAgentReply(getReply(msg));
+    }
   </script>
 
 </body>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services — Grandnanny | Premium In-Home Senior Care</title>
-  <meta name="description" content="Grandnanny offers personal care, companionship, specialized care, and respite care for seniors across Ontario. Personalized, dignified, and compassionate in-home support.">
+  <title>About Us — Grandnanny | Premium In-Home Senior Care</title>
+  <meta name="description" content="Learn about Grandnanny's mission to deliver exceptional, personalized in-home senior care that upholds dignity, independence, and well-being for every family we serve.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #3D5A5B;
-      --navy-deep: #2E4748;
-      --navy-darker: #243B3C;
-      --navy-mid: #4E6D6E;
+      --navy: #2A2F66;
+      --navy-deep: #1C204F;
+      --navy-darker: #14173B;
+      --navy-mid: #3A4080;
       --rose: #8BAB9E;
       --rose-light: #A3BFB4;
       --rose-pale: #C8DAD1;
@@ -23,14 +23,14 @@
       --cream: #EFF2F0;
       --cream-light: #F5F7F6;
       --cream-white: #FAFBFA;
-      --text-dark: #2E4748;
+      --text-dark: #1C204F;
       --text-body: #4A5E5F;
       --text-muted: #7A8E8F;
       --text-on-dark: #DDE5E2;
       --border-light: rgba(139, 171, 158, 0.25);
-      --border-navy: rgba(61, 90, 91, 0.1);
-      --shadow-soft: 0 4px 30px rgba(46, 71, 72, 0.06);
-      --shadow-medium: 0 8px 40px rgba(46, 71, 72, 0.1);
+      --border-navy: rgba(42, 47, 102, 0.1);
+      --shadow-soft: 0 4px 30px rgba(28, 32, 79, 0.06);
+      --shadow-medium: 0 8px 40px rgba(28, 32, 79, 0.1);
       --warm-accent: #B8936A;
       --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Lora', Georgia, serif;
@@ -47,981 +47,275 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── NAVIGATION ─── */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: rgba(253, 251, 248, 0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-navy);
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0.75rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      gap: 0.6rem;
-    }
-
-    .nav-logo img {
-      height: 40px;
-      width: 40px;
-      object-fit: contain;
-      background: var(--navy);
-      border-radius: 50%;
-      padding: 4px;
-    }
-
-    .nav-logo-text {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 1.5px;
-      background: var(--rose);
-      transition: width 0.3s ease;
-    }
-
+    /* NAVIGATION */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(250, 251, 250, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-navy); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; gap: 0.6rem; }
+    .nav-logo img { height: 44px; width: 44px; object-fit: contain; background: var(--navy); border-radius: 50%; padding: 5px; box-shadow: 0 2px 8px rgba(28, 32, 79, 0.2); }
+    .nav-logo-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+    .nav-links a { font-family: var(--font-body); font-size: 0.88rem; color: var(--text-muted); text-decoration: none; letter-spacing: 0.03em; transition: color 0.3s ease; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--rose); transition: width 0.3s ease; }
     .nav-links a:hover { color: var(--navy); }
     .nav-links a:hover::after { width: 100%; }
     .nav-links a.active { color: var(--navy); }
     .nav-links a.active::after { width: 100%; }
-
-    .nav-cta {
-      background: var(--navy) !important;
-      color: var(--cream) !important;
-      padding: 0.6rem 1.5rem !important;
-      border-radius: 4px;
-      font-size: 0.82rem !important;
-      letter-spacing: 0.05em !important;
-      transition: all 0.3s ease !important;
-    }
-
+    .nav-cta { background: var(--navy) !important; color: var(--cream) !important; padding: 0.6rem 1.5rem !important; border-radius: 4px; font-size: 0.82rem !important; letter-spacing: 0.05em !important; transition: all 0.3s ease !important; }
     .nav-cta::after { display: none !important; }
-    .nav-cta:hover {
-      background: var(--navy-mid) !important;
-      transform: translateY(-1px);
+    .nav-cta:hover { background: var(--navy-mid) !important; transform: translateY(-1px); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); }
+
+    /* PAGE HERO */
+    .page-hero { padding: 10rem 2rem 5rem; background: linear-gradient(160deg, var(--navy-darker) 0%, var(--navy-deep) 40%, var(--navy) 100%); text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.007) 2px, rgba(255,255,255,0.007) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 4px); pointer-events: none; }
+    .page-hero-circle { position: absolute; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(139, 171, 158, 0.06); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .page-hero-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; animation: fadeUp 1s ease-out; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+    .section-label { font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 1.25rem; font-weight: 500; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400; color: var(--cream); line-height: 1.2; margin-bottom: 1.5rem; }
+    .page-hero h1 em { font-style: italic; color: var(--rose-light); }
+    .page-hero p { font-size: 1.05rem; color: var(--text-on-dark); opacity: 0.8; max-width: 550px; margin: 0 auto; line-height: 1.8; }
+
+    .section-divider { display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 1.5rem 2rem; }
+    .section-divider::before, .section-divider::after { content: ''; height: 1px; width: 80px; background: var(--border-light); }
+    .divider-icon { width: 18px; height: 18px; color: var(--rose); opacity: 0.6; }
+
+    .btn { font-family: var(--font-body); font-size: 0.88rem; letter-spacing: 0.05em; padding: 1rem 2.2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-navy { background: var(--navy); color: var(--cream); }
+    .btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(42, 47, 102, 0.2); }
+
+    /* INTRO */
+    .intro-section { padding: 6rem 2rem; background: var(--cream-white); }
+    .intro-content { max-width: 750px; margin: 0 auto; text-align: center; }
+    .intro-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; color: var(--navy); margin-bottom: 2rem; line-height: 1.25; }
+    .intro-content p { font-size: 1.02rem; line-height: 2; color: var(--text-body); margin-bottom: 1.25rem; }
+    .intro-content .emphasis-line { font-family: var(--font-display); font-size: 1.25rem; font-style: italic; color: var(--navy); margin: 2rem 0; line-height: 1.6; position: relative; }
+    .intro-content .emphasis-line::before { content: ''; display: block; width: 40px; height: 2px; background: var(--rose); margin: 0 auto 1rem; }
+
+    /* MISSION */
+    .mission-section { padding: 6rem 2rem; background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 100%); position: relative; overflow: hidden; }
+    .mission-section::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.003) 2px, rgba(255,255,255,0.003) 4px); pointer-events: none; }
+    .mission-circle { position: absolute; width: 500px; height: 500px; border-radius: 50%; border: 1px solid rgba(139, 171, 158, 0.06); top: 50%; right: -150px; transform: translateY(-50%); pointer-events: none; }
+    .mission-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .mission-header { text-align: center; margin-bottom: 3rem; }
+    .mission-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; color: var(--cream); line-height: 1.25; }
+    .mission-body { max-width: 700px; margin: 0 auto; text-align: center; }
+    .mission-body p { font-size: 1.02rem; color: var(--text-on-dark); line-height: 2; margin-bottom: 1.25rem; opacity: 0.8; }
+    .mission-body .mission-tagline { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: var(--rose); margin-top: 2.5rem; opacity: 1; letter-spacing: 0.03em; }
+
+    /* MEANING */
+    .meaning-section { padding: 6rem 2rem; background: var(--cream-light); }
+    .meaning-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .meaning-image { display: flex; align-items: center; justify-content: center; }
+    .meaning-image img { width: 280px; height: 280px; object-fit: contain; background: var(--navy-deep); border-radius: 50%; padding: 30px; box-shadow: 0 8px 40px rgba(28, 32, 79, 0.15); }
+    .meaning-text h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 400; color: var(--navy); margin-bottom: 1.5rem; line-height: 1.25; }
+    .meaning-text p { font-size: 0.98rem; color: var(--text-body); line-height: 1.9; margin-bottom: 1rem; }
+    .meaning-text .short-lines { margin: 1.5rem 0; }
+    .meaning-text .short-lines p { margin-bottom: 0.25rem; font-style: italic; color: var(--text-muted); }
+    .meaning-text .closing { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--rose); margin-top: 1.5rem; }
+
+    /* VALUES */
+    .values-section { padding: 6rem 2rem; background: var(--cream-white); }
+    .values-inner { max-width: 1100px; margin: 0 auto; }
+    .values-header { text-align: center; margin-bottom: 4rem; }
+    .values-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; color: var(--navy); line-height: 1.25; }
+    .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .value-card { background: var(--cream-light); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--border-navy); transition: all 0.4s ease; position: relative; overflow: hidden; }
+    .value-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--rose-pale), var(--rose), var(--rose-pale)); opacity: 0; transition: opacity 0.4s ease; }
+    .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-medium); }
+    .value-card:hover::before { opacity: 1; }
+    .value-icon { width: 48px; height: 48px; background: var(--rose-glow); border: 1px solid rgba(139, 171, 158, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+    .value-icon svg { width: 22px; height: 22px; color: var(--rose); }
+    .value-card h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
+    .value-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; }
+
+    /* CTA */
+    .cta-section { padding: 6rem 2rem; background: var(--cream-light); text-align: center; position: relative; overflow: hidden; }
+    .cta-circle { position: absolute; width: 450px; height: 450px; border-radius: 50%; border: 1px solid rgba(42, 47, 102, 0.05); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .cta-content { max-width: 620px; margin: 0 auto; position: relative; z-index: 1; }
+    .cta-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 400; color: var(--navy); margin-bottom: 1rem; line-height: 1.3; }
+    .cta-content .cta-tagline { font-size: 1.15rem; color: var(--rose); margin-bottom: 2.5rem; font-style: italic; font-family: var(--font-display); }
+
+    /* FOOTER */
+    .footer { background: var(--navy-deep); padding: 4rem 2rem 2rem; position: relative; }
+    .footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--rose), transparent); opacity: 0.4; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+    .footer-brand { display: flex; flex-direction: column; gap: 1rem; }
+    .footer-brand-logo { height: 50px; width: 50px; object-fit: contain; background: var(--navy); border-radius: 50%; padding: 5px; align-self: flex-start; }
+    .footer-brand p { font-size: 0.88rem; color: var(--text-on-dark); line-height: 1.7; max-width: 280px; opacity: 0.6; }
+    .footer-col h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--cream); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.88rem; color: var(--text-on-dark); text-decoration: none; opacity: 0.55; transition: all 0.3s ease; }
+    .footer-col a:hover { color: var(--rose-light); opacity: 1; }
+    .footer-bottom { max-width: 1100px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid rgba(139, 171, 158, 0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-on-dark); opacity: 0.5; }
+    .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--rose); opacity: 1; }
+
+    .highlight-word { font-style: normal; color: var(--warm-accent); font-weight: 500; position: relative; }
+    .highlight-word::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: var(--warm-accent); opacity: 0.3; }
+
+    /* STICKY MOBILE BAR */
+    .sticky-mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--cream-white); border-top: 1px solid var(--border-light); padding: 0.75rem 1rem; z-index: 9990; box-shadow: 0 -4px 20px rgba(28, 32, 79, 0.08); gap: 0.6rem; }
+    .sticky-mobile-bar a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; border-radius: 6px; text-decoration: none; font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; transition: all 0.3s; }
+    .sticky-mobile-bar .btn-call { background: var(--cream-light); color: var(--navy); border: 1px solid var(--border-navy); }
+    .sticky-mobile-bar .btn-book { background: var(--navy); color: var(--cream); }
+    .sticky-mobile-bar svg { width: 16px; height: 16px; }
+
+    /* CHAT WIDGET */
+    .chat-overlay { display: none; position: fixed; inset: 0; background: rgba(28, 32, 79, 0.5); z-index: 9998; }
+    .chat-overlay.open { display: block; }
+    .chat-widget { display: none; position: fixed; bottom: 24px; right: 24px; width: 400px; max-height: 560px; background: var(--cream-white); border-radius: 16px; box-shadow: 0 12px 48px rgba(28, 32, 79, 0.2); z-index: 9999; flex-direction: column; overflow: hidden; }
+    .chat-widget.open { display: flex; }
+    .chat-header { background: var(--navy); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .chat-header-info { display: flex; align-items: center; gap: 0.75rem; }
+    .chat-avatar { width: 36px; height: 36px; background: var(--navy-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .chat-avatar svg { width: 18px; height: 18px; color: var(--rose); }
+    .chat-header-text h4 { font-family: var(--font-display); font-size: 1.05rem; color: var(--cream); font-weight: 500; }
+    .chat-header-text p { font-size: 0.7rem; color: var(--rose-light); opacity: 0.8; }
+    .chat-close { background: none; border: none; color: var(--cream); cursor: pointer; padding: 4px; opacity: 0.7; }
+    .chat-close:hover { opacity: 1; }
+    .chat-messages { flex: 1; padding: 1.25rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; max-height: 320px; min-height: 220px; }
+    .chat-msg { max-width: 82%; padding: 0.75rem 1rem; border-radius: 12px; font-size: 0.88rem; line-height: 1.6; }
+    .chat-msg.agent { background: var(--cream-light); color: var(--text-body); align-self: flex-start; border-bottom-left-radius: 4px; }
+    .chat-msg.user { background: var(--navy); color: var(--cream); align-self: flex-end; border-bottom-right-radius: 4px; }
+    .chat-msg .msg-time { font-size: 0.68rem; opacity: 0.5; margin-top: 4px; display: block; }
+    .chat-quick-replies { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1.25rem 0.5rem; }
+    .chat-quick-reply { padding: 0.5rem 0.9rem; background: var(--cream-light); border: 1px solid var(--border-navy); border-radius: 16px; font-size: 0.78rem; color: var(--navy); cursor: pointer; font-family: var(--font-body); }
+    .chat-quick-reply:hover { background: var(--rose-glow); border-color: var(--rose); }
+    .chat-input-area { padding: 1rem 1.25rem; border-top: 1px solid var(--border-navy); display: flex; gap: 0.75rem; align-items: center; }
+    .chat-input { flex: 1; font-family: var(--font-body); font-size: 0.88rem; padding: 0.7rem 1rem; border: 1px solid var(--border-navy); border-radius: 24px; background: var(--cream-light); color: var(--text-body); outline: none; }
+    .chat-input:focus { border-color: var(--rose); }
+    .chat-send { width: 38px; height: 38px; background: var(--navy); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+    .chat-send:hover { background: var(--navy-mid); }
+    .chat-send svg { width: 18px; height: 18px; color: var(--cream); }
+    .chat-typing { display: none; align-self: flex-start; padding: 0.75rem 1rem; background: var(--cream-light); border-radius: 12px; border-bottom-left-radius: 4px; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+    .chat-typing.show { display: block; }
+    .chat-fab { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9997; box-shadow: 0 4px 20px rgba(28, 32, 79, 0.25); border: none; }
+    .chat-fab:hover { background: var(--navy-mid); }
+    .chat-fab.hidden { display: none; }
+    .chat-fab svg { width: 26px; height: 26px; color: var(--cream); }
+
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    @media (max-width: 900px) {
+      .meaning-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+      .meaning-image { order: -1; }
+      .values-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--cream-white); padding: 1.5rem 2rem; gap: 1.25rem; border-bottom: 1px solid var(--border-navy); box-shadow: var(--shadow-soft); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .page-hero { padding: 8rem 1.5rem 3.5rem; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .sticky-mobile-bar { display: flex; }
+      body { padding-bottom: 70px; }
+      .chat-fab { bottom: 78px; right: 16px; width: 50px; height: 50px; }
+      .chat-fab svg { width: 22px; height: 22px; }
+    }
+    @media (max-width: 500px) {
+      .chat-widget { width: calc(100% - 16px); right: 8px; bottom: 78px; max-height: 75vh; }
     }
 
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 24px; height: 2px;
-      background: var(--navy);
-    }
-
-    /* ─── PAGE HERO ─── */
-    .page-hero {
-      padding: 10rem 2rem 5rem;
-      background: linear-gradient(160deg, var(--navy-darker) 0%, var(--navy-deep) 40%, var(--navy) 100%);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.007) 2px, rgba(255,255,255,0.007) 4px),
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 4px);
-      pointer-events: none;
-    }
-
-    .page-hero-circle {
-      position: absolute;
-      width: 400px; height: 400px;
-      border-radius: 50%;
-      border: 1px solid rgba(139, 171, 158, 0.06);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      margin: 0 auto;
-      animation: fadeUp 1s ease-out;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .section-label {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 1.25rem;
-      font-weight: 500;
-    }
-
-    .page-hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      font-weight: 400;
-      color: var(--cream);
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-    }
-
-    .page-hero h1 em {
-      font-style: italic;
-      color: var(--rose-light);
-    }
-
-    .page-hero p {
-      font-size: 1.05rem;
-      color: var(--text-on-dark);
-      opacity: 0.8;
-      max-width: 580px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    /* ─── SERVICES INTRO ─── */
-    .services-intro {
-      padding: 6rem 2rem;
-      background: var(--cream-white);
-    }
-
-    .services-intro-content {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .services-intro-content h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 400;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
-      line-height: 1.25;
-    }
-
-    .services-intro-content p {
-      font-size: 1.02rem;
-      line-height: 2;
-      color: var(--text-body);
-      margin-bottom: 1rem;
-    }
-
-    .services-intro-content .emphasis-line {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--rose);
-      margin-top: 1.5rem;
-    }
-
-    /* ─── SERVICE BLOCKS ─── */
+    /* Services list */
+    .services-list { padding: 4rem 2rem 2rem; background: var(--cream-white); }
+    .services-list-inner { max-width: 1050px; margin: 0 auto; }
     .service-block {
-      padding: 5rem 2rem;
-      position: relative;
-    }
-
-    .service-block:nth-child(odd) {
-      background: var(--cream-light);
-    }
-
-    .service-block:nth-child(even) {
-      background: var(--cream-white);
-    }
-
-    .service-inner {
-      max-width: 1050px;
-      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 4rem;
-      align-items: center;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: start;
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-light);
     }
-
-    .service-block:nth-child(even) .service-inner {
-      direction: rtl;
-    }
-
-    .service-block:nth-child(even) .service-inner > * {
-      direction: ltr;
-    }
-
-    .service-visual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
+    .service-block:last-child { border-bottom: none; }
     .service-icon-wrapper {
-      width: 200px;
-      height: 200px;
+      width: 130px; height: 130px;
       background: var(--navy-deep);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      box-shadow: 0 8px 40px rgba(46, 71, 72, 0.15);
+      flex-shrink: 0;
+      box-shadow: 0 8px 30px rgba(28, 32, 79, 0.15);
     }
-
-    .service-icon-wrapper::after {
-      content: '';
-      position: absolute;
-      inset: -12px;
-      border-radius: 50%;
-      border: 1px solid rgba(139, 171, 158, 0.15);
-    }
-
-    .service-icon-wrapper svg {
-      width: 70px;
-      height: 70px;
-      color: var(--rose);
-      stroke-width: 1.2;
-    }
-
+    .service-icon-wrapper svg { width: 56px; height: 56px; color: var(--rose); }
     .service-text h2 {
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.7rem, 3.2vw, 2.2rem);
       font-weight: 400;
       color: var(--navy);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       line-height: 1.25;
     }
+    .service-text p { font-size: 0.96rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1rem; }
+    .service-includes { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); }
+    .service-includes h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
+    .service-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem; }
+    .service-list li { font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; position: relative; line-height: 1.6; }
+    .service-list li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); opacity: 0.6; }
 
-    .service-text p {
-      font-size: 0.96rem;
-      color: var(--text-body);
-      line-height: 1.85;
-      margin-bottom: 1rem;
-    }
-
-    .service-text .service-includes {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .service-text .service-includes h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-    }
-
-    .service-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.4rem 1.5rem;
-    }
-
-    .service-list li {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      padding-left: 1.25rem;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    .service-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.55rem;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--rose);
-      opacity: 0.6;
-    }
-
-    /* ─── PROCESS SECTION ─── */
+    /* Process section */
     .process-section {
       padding: 6rem 2rem;
       background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 100%);
       position: relative;
       overflow: hidden;
     }
-
     .process-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+      content: ''; position: absolute; inset: 0;
       background:
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.005) 2px, rgba(255,255,255,0.005) 4px),
         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.003) 2px, rgba(255,255,255,0.003) 4px);
       pointer-events: none;
     }
-
-    .process-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .process-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .process-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 400;
-      color: var(--cream);
-      margin-bottom: 1rem;
-    }
-
-    .process-header p {
-      font-size: 1rem;
-      color: var(--text-on-dark);
-      opacity: 0.75;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .process-step {
-      text-align: center;
-      position: relative;
-    }
-
-    .process-step::after {
-      content: '';
-      position: absolute;
-      top: 35px;
-      right: -1rem;
-      width: 2rem;
-      height: 1px;
-      background: rgba(139, 171, 158, 0.2);
-    }
-
-    .process-step:last-child::after {
-      display: none;
-    }
-
-    .step-number {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--rose);
-      opacity: 0.4;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .process-step h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 0.75rem;
-    }
-
-    .process-step p {
-      font-size: 0.88rem;
-      color: var(--text-on-dark);
-      opacity: 0.7;
-      line-height: 1.7;
-    }
-
-    /* ─── DIVIDER ─── */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1.5rem 2rem;
-    }
-
-    .section-divider::before,
-    .section-divider::after {
-      content: '';
-      height: 1px;
-      width: 80px;
-      background: var(--border-light);
-    }
-
-    .divider-icon {
-      width: 18px; height: 18px;
-      color: var(--rose);
-      opacity: 0.6;
-    }
-
-    /* ─── CTA BANNER ─── */
-    .cta-section {
-      padding: 6rem 2rem;
-      background: var(--cream-light);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-circle {
-      position: absolute;
-      width: 450px; height: 450px;
-      border-radius: 50%;
-      border: 1px solid rgba(61, 90, 91, 0.05);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .cta-content {
-      max-width: 620px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-content h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.75rem);
-      font-weight: 400;
-      color: var(--navy);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .cta-content .cta-tagline {
-      font-size: 1.15rem;
-      color: var(--rose);
-      margin-bottom: 2.5rem;
-      font-style: italic;
-      font-family: var(--font-display);
-    }
-
-    .btn {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      letter-spacing: 0.05em;
-      padding: 1rem 2.2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-navy {
-      background: var(--navy);
-      color: var(--cream);
-    }
-
-    .btn-navy:hover {
-      background: var(--navy-mid);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(61, 90, 91, 0.2);
-    }
-
-    .btn-primary {
-      background: var(--rose);
-      color: var(--navy-deep);
-    }
-
-    .btn-primary:hover {
-      background: var(--rose-light);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(139, 171, 158, 0.3);
-    }
-
-    /* ─── FOOTER ─── */
-    .footer {
-      background: var(--navy-deep);
-      padding: 4rem 2rem 2rem;
-      position: relative;
-    }
-
-    .footer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--rose), transparent);
-      opacity: 0.4;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .footer-brand-logo {
-      height: 50px;
-      width: 50px;
-      object-fit: cover;
-      align-self: flex-start;
-      border-radius: 6px;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
-      color: var(--text-on-dark);
-      line-height: 1.7;
-      max-width: 280px;
-      opacity: 0.6;
-    }
-
-    .footer-col h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 1rem;
-    }
-
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 0.5rem; }
-
-    .footer-col a {
-      font-size: 0.88rem;
-      color: var(--text-on-dark);
-      text-decoration: none;
-      opacity: 0.55;
-      transition: all 0.3s ease;
-    }
-
-    .footer-col a:hover {
-      color: var(--rose-light);
-      opacity: 1;
-    }
-
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 3rem auto 0;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(139, 171, 158, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: var(--text-on-dark);
-      opacity: 0.5;
-    }
-
-    .footer-tagline {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--rose);
-      opacity: 1;
-    }
-
-    /* ─── SCROLL REVEAL ─── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      .service-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-      }
-
-      .service-block:nth-child(even) .service-inner {
-        direction: ltr;
-      }
-
-      .service-visual { order: -1; }
-
-      .service-list {
-        grid-template-columns: 1fr;
-        max-width: 280px;
-        margin: 0 auto;
-      }
-
-      .process-steps {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .process-step::after { display: none; }
-
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-    }
+    .process-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .process-header { text-align: center; margin-bottom: 4rem; }
+    .process-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; color: var(--cream); margin-bottom: 1rem; }
+    .process-header p { font-size: 1rem; color: var(--text-on-dark); opacity: 0.75; max-width: 500px; margin: 0 auto; }
+    .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .process-step { text-align: center; position: relative; }
+    .step-number { font-family: var(--font-display); font-size: 3rem; font-weight: 300; color: var(--rose); opacity: 0.4; line-height: 1; margin-bottom: 1rem; }
+    .process-step h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--cream); margin-bottom: 0.75rem; }
+    .process-step p { font-size: 0.88rem; color: var(--text-on-dark); opacity: 0.7; line-height: 1.7; }
 
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        flex-direction: column;
-        background: var(--cream-white);
-        padding: 1.5rem 2rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid var(--border-navy);
-        box-shadow: var(--shadow-soft);
-      }
-
-      .nav-links.open { display: flex; }
-      .nav-toggle { display: flex; }
-
-      .page-hero { padding: 8rem 1.5rem 3.5rem; }
-
-      .footer-inner { grid-template-columns: 1fr; }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 0.75rem;
-        text-align: center;
-      }
+      .service-block { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; padding: 2.5rem 0; }
+      .service-icon-wrapper { margin: 0 auto; width: 100px; height: 100px; }
+      .service-icon-wrapper svg { width: 42px; height: 42px; }
+      .service-list { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; text-align: left; }
+      .process-steps { grid-template-columns: 1fr; gap: 2.5rem; }
     }
 
-    /* ─── HIGHLIGHTED KEYWORDS ─── */
-    .highlight-word {
-      font-style: normal;
-      color: var(--warm-accent);
-      font-weight: 500;
-      position: relative;
-    }
-
-    .highlight-word::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--warm-accent);
-      opacity: 0.3;
-    }
-
-    /* ─── CHAT WIDGET ─── */
-    .chat-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(34, 45, 33, 0.5);
-      z-index: 9998;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .chat-overlay.open { display: block; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .chat-widget {
-      display: none;
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 400px;
-      max-height: 560px;
-      background: var(--cream-white);
-      border-radius: 16px;
-      box-shadow: 0 12px 48px rgba(46, 71, 72, 0.2);
-      z-index: 9999;
-      flex-direction: column;
-      overflow: hidden;
-      animation: slideUp 0.4s ease;
-    }
-
-    .chat-widget.open { display: flex; }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .chat-header {
-      background: var(--navy);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .chat-header-info {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .chat-avatar {
-      width: 36px; height: 36px;
-      background: var(--navy-mid);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .chat-avatar svg {
-      width: 18px; height: 18px;
-      color: var(--rose);
-    }
-
-    .chat-header-text h4 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      color: var(--cream);
-      font-weight: 500;
-    }
-
-    .chat-header-text p {
-      font-size: 0.7rem;
-      color: var(--rose-light);
-      opacity: 0.8;
-    }
-
-    .chat-close {
-      background: none;
-      border: none;
-      color: var(--cream);
-      cursor: pointer;
-      padding: 4px;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    .chat-close:hover { opacity: 1; }
-
-    .chat-messages {
-      flex: 1;
-      padding: 1.25rem;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-height: 350px;
-      min-height: 250px;
-    }
-
-    .chat-msg {
-      max-width: 82%;
-      padding: 0.75rem 1rem;
-      border-radius: 12px;
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
-
-    .chat-msg.agent {
-      background: var(--cream-light);
-      color: var(--text-body);
-      align-self: flex-start;
-      border-bottom-left-radius: 4px;
-    }
-
-    .chat-msg.user {
-      background: var(--navy);
-      color: var(--cream);
-      align-self: flex-end;
-      border-bottom-right-radius: 4px;
-    }
-
-    .chat-msg .msg-time {
-      font-size: 0.68rem;
-      opacity: 0.5;
-      margin-top: 4px;
-      display: block;
-    }
-
-    .chat-input-area {
-      padding: 1rem 1.25rem;
-      border-top: 1px solid var(--border-navy);
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .chat-input {
-      flex: 1;
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      padding: 0.7rem 1rem;
-      border: 1px solid var(--border-navy);
-      border-radius: 24px;
-      background: var(--cream-light);
-      color: var(--text-body);
-      outline: none;
-      transition: border-color 0.3s;
-    }
-
-    .chat-input:focus {
-      border-color: var(--rose);
-    }
-
-    .chat-input::placeholder {
-      color: var(--text-muted);
-      opacity: 0.5;
-    }
-
-    .chat-send {
-      width: 38px; height: 38px;
-      background: var(--navy);
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s;
-      flex-shrink: 0;
-    }
-
-    .chat-send:hover { background: var(--navy-mid); }
-
-    .chat-send svg {
-      width: 18px; height: 18px;
-      color: var(--cream);
-    }
-
-    .chat-typing {
-      display: none;
-      align-self: flex-start;
-      padding: 0.75rem 1rem;
-      background: var(--cream-light);
-      border-radius: 12px;
-      border-bottom-left-radius: 4px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    .chat-typing.show { display: block; }
-
-    /* Chat FAB */
-    .chat-fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px; height: 60px;
-      background: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 9997;
-      box-shadow: 0 4px 20px rgba(46, 71, 72, 0.25);
-      transition: transform 0.3s, background 0.3s;
-      border: none;
-    }
-
-    .chat-fab:hover { transform: scale(1.08); background: var(--navy-mid); }
-    .chat-fab.hidden { display: none; }
-
-    .chat-fab svg {
-      width: 26px; height: 26px;
-      color: var(--cream);
-    }
-
-    @media (max-width: 500px) {
-      .chat-widget {
-        width: calc(100% - 16px);
-        right: 8px;
-        bottom: 8px;
-        max-height: 85vh;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <img src="logo-icon-transparent.png" alt="Grandnanny">
         <span class="nav-logo-text">Grandnanny</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="why-us.html">Why Us</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Visit</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-circle"></div>
     <div class="page-hero-content">
@@ -1031,9 +325,8 @@
     </div>
   </section>
 
-  <!-- SERVICES INTRO -->
-  <section class="services-intro">
-    <div class="services-intro-content reveal">
+  <section class="intro-section">
+    <div class="intro-content reveal">
       <h2>Support That Feels Like Family</h2>
       <p>Just as you once searched for the right caregiver for your children, you now seek someone who will treat your parents with that same level of compassion and respect.</p>
       <p>Every care plan we create is as unique as the person receiving it — because no two individuals, and no two families, are the same.</p>
@@ -1041,142 +334,116 @@
     </div>
   </section>
 
-  <!-- SERVICE 1: PERSONAL CARE -->
-  <div class="service-block">
-    <div class="service-inner reveal">
-      <div class="service-visual">
-        <div class="service-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-          </svg>
-        </div>
-      </div>
-      <div class="service-text">
-        <p class="section-label">Service</p>
-        <h2>Personal Care</h2>
-        <p>Delivered by certified PSWs (Personal Support Workers), personal care is about more than physical assistance — it's about preserving dignity while providing the gentle, respectful support your loved one needs to feel comfortable and confident in their daily life.</p>
-        <p>Our caregivers approach every interaction with patience and warmth, ensuring that each person feels cared for — never rushed, never overlooked.</p>
-        <div class="service-includes">
-          <h4>What's included:</h4>
-          <ul class="service-list">
-            <li>Bathing and hygiene assistance</li>
-            <li>Dressing and grooming</li>
-            <li>Mobility and transfer support</li>
-            <li>Toileting assistance</li>
-            <li>Meal preparation</li>
-            <li>Medication reminders</li>
-            <li>Light housekeeping</li>
-            <li>Routine and schedule support</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <section class="services-list">
+    <div class="services-list-inner">
 
-  <!-- SERVICE 2: COMPANIONSHIP -->
-  <div class="service-block">
-    <div class="service-inner reveal">
-      <div class="service-visual">
+      <!-- Service 1: Personal Care -->
+      <div class="service-block reveal">
         <div class="service-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-            <path d="M16 3.13a4 4 0 010 7.75"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div class="service-text">
+          <p class="section-label">Service</p>
+          <h2>Personal Care</h2>
+          <p>Delivered by certified caregivers, personal care is about more than physical assistance — it's about preserving dignity while providing the gentle, respectful support your loved one needs to feel comfortable and confident in their daily life.</p>
+          <p>Our caregivers approach every interaction with patience and warmth, ensuring that each person feels cared for — never rushed, never overlooked.</p>
+          <div class="service-includes">
+            <h4>What's included:</h4>
+            <ul class="service-list">
+              <li>Bathing and hygiene assistance</li>
+              <li>Dressing and grooming</li>
+              <li>Mobility and transfer support</li>
+              <li>Toileting assistance</li>
+              <li>Meal preparation</li>
+              <li>Medication reminders</li>
+              <li>Light housekeeping</li>
+              <li>Routine and schedule support</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="service-text">
-        <p class="section-label">Service</p>
-        <h2><em class="highlight-word">Companionship</em></h2>
-        <p>Loneliness can be one of the greatest challenges for seniors. Our <em class="highlight-word">companionship</em> service is designed to bring meaningful connection, joy, and a sense of belonging back into your loved one's daily life.</p>
-        <p>Our PSWs aren't just present — they build real <em class="highlight-word">friendships</em>. They listen, they share, and they genuinely care about the person they're with.</p>
-        <div class="service-includes">
-          <h4>What's included:</h4>
-          <ul class="service-list">
-            <li>Meaningful conversation</li>
-            <li>Accompaniment on outings</li>
-            <li>Games, hobbies, and activities</li>
-            <li>Reading and storytelling</li>
-            <li>Social engagement support</li>
-            <li>Emotional well-being check-ins</li>
-            <li>Appointment accompaniment</li>
-            <li>Technology help and video calls</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- SERVICE 3: SPECIALIZED CARE -->
-  <div class="service-block">
-    <div class="service-inner reveal">
-      <div class="service-visual">
+      <!-- Service 2: Companionship -->
+      <div class="service-block reveal">
         <div class="service-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2z"/>
-            <path d="M12 6v6l4 2"/>
-            <path d="M8 12h8"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="service-text">
+          <p class="section-label">Service</p>
+          <h2><em class="highlight-word">Companionship</em></h2>
+          <p>Loneliness can be one of the greatest challenges for seniors. Our <em class="highlight-word">companionship</em> service is designed to bring meaningful connection, joy, and a sense of belonging back into your loved one's daily life.</p>
+          <p>Our caregivers aren't just present — they build real <em class="highlight-word">friendships</em>. They listen, they share, and they genuinely care about the person they're with.</p>
+          <div class="service-includes">
+            <h4>What's included:</h4>
+            <ul class="service-list">
+              <li>Meaningful conversation</li>
+              <li>Games, hobbies, and activities</li>
+              <li>Reading and storytelling</li>
+              <li>Memory and reminiscence support</li>
+              <li>Emotional well-being check-ins</li>
+              <li>Light meal preparation together</li>
+              <li>Gentle exercise and movement</li>
+              <li>Companionship during meals</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="service-text">
-        <p class="section-label">Service</p>
-        <h2>Specialized Care</h2>
-        <p>When your loved one requires more focused attention due to a medical condition or recovery process, our specialized care program provides the expertise and sensitivity the situation demands.</p>
-        <p>Our PSWs are trained to handle complex care needs with professionalism and grace — always prioritizing comfort, safety, and emotional well-being alongside physical care.</p>
-        <div class="service-includes">
-          <h4>What's included:</h4>
-          <ul class="service-list">
-            <li>Dementia and Alzheimer's care</li>
-            <li>Post-surgery recovery support</li>
-            <li>Chronic condition management</li>
-            <li>Palliative comfort care</li>
-            <li>Fall prevention strategies</li>
-            <li>Cognitive engagement activities</li>
-            <li>Health monitoring and reporting</li>
-            <li>Coordination with medical teams</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- SERVICE 4: RESPITE CARE -->
-  <div class="service-block">
-    <div class="service-inner reveal">
-      <div class="service-visual">
+      <!-- Service 3: Specialized Care -->
+      <div class="service-block reveal">
         <div class="service-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/>
-            <path d="M12 7v5"/>
-            <path d="M8 15c1.333 1 2.667 1.5 4 1.5s2.667-.5 4-1.5"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2z"/><path d="M12 6v6l4 2"/><path d="M8 12h8"/></svg>
+        </div>
+        <div class="service-text">
+          <p class="section-label">Service</p>
+          <h2>Specialized Care</h2>
+          <p>When your loved one requires more focused attention due to a medical condition or recovery process, our specialized care program provides the expertise and sensitivity the situation demands.</p>
+          <p>Our caregivers are trained to handle complex care needs with professionalism and grace — always prioritizing comfort, safety, and emotional well-being alongside physical care.</p>
+          <div class="service-includes">
+            <h4>What's included:</h4>
+            <ul class="service-list">
+              <li>Dementia and Alzheimer's care</li>
+              <li>Post-surgery recovery support</li>
+              <li>Chronic condition management</li>
+              <li>Palliative comfort care</li>
+              <li>Fall prevention strategies</li>
+              <li>Cognitive engagement activities</li>
+              <li>Health monitoring and reporting</li>
+              <li>Coordination with medical teams</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="service-text">
-        <p class="section-label">Service</p>
-        <h2>Respite Care</h2>
-        <p>Caring for a loved one is an act of deep devotion — but even the most dedicated family caregivers need time to rest and recharge. Respite care ensures your loved one continues to receive exceptional care while you take the time you need.</p>
-        <p>Whether it's a few hours, a weekend, or an extended period, our PSWs step in seamlessly so you can step back with confidence.</p>
-        <div class="service-includes">
-          <h4>What's included:</h4>
-          <ul class="service-list">
-            <li>Temporary caregiver relief</li>
-            <li>Flexible scheduling options</li>
-            <li>Same-quality care continuity</li>
-            <li>Overnight and weekend coverage</li>
-            <li>Emergency respite availability</li>
-            <li>Full personal care support</li>
-            <li>Activity and companionship</li>
-            <li>Detailed care updates for family</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- PROCESS SECTION -->
+      <!-- Service 4: Respite Care -->
+      <div class="service-block reveal">
+        <div class="service-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path d="M12 7v5"/><path d="M8 15c1.333 1 2.667 1.5 4 1.5s2.667-.5 4-1.5"/></svg>
+        </div>
+        <div class="service-text">
+          <p class="section-label">Service</p>
+          <h2>Respite Care</h2>
+          <p>Caring for a loved one is an act of deep devotion — but even the most dedicated family caregivers need time to rest and recharge. Respite care ensures your loved one continues to receive exceptional care while you take the time you need.</p>
+          <p>Whether it's a few hours, a weekend, or an extended period, our caregivers step in seamlessly so you can step back with confidence.</p>
+          <div class="service-includes">
+            <h4>What's included:</h4>
+            <ul class="service-list">
+              <li>Temporary caregiver relief</li>
+              <li>Flexible scheduling options</li>
+              <li>Same-quality care continuity</li>
+              <li>Overnight and weekend coverage</li>
+              <li>Emergency respite availability</li>
+              <li>Full personal care support</li>
+              <li>Activity and companionship</li>
+              <li>Detailed care updates for family</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section class="process-section">
     <div class="process-inner">
       <div class="process-header reveal">
@@ -1197,29 +464,27 @@
         </div>
         <div class="process-step reveal">
           <div class="step-number">03</div>
-          <h3>Matched PSW + Ongoing Follow-Ups</h3>
-          <p>We carefully match your loved one with a certified PSW chosen for their skills and personality — and provide regular follow-ups to ensure the highest standard of care.</p>
+          <h3>Meet Your Senior Care Specialist</h3>
+          <p>We carefully match your loved one with a certified caregiver chosen for skill and personality — and provide regular follow-ups to ensure the highest standard of care.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
   <section class="cta-section">
     <div class="cta-circle"></div>
     <div class="cta-content reveal">
       <h2>Every Family's Needs Are Different</h2>
       <p class="cta-tagline">Let's find the right care plan for your loved one.</p>
-      <a href="contact.html" class="btn btn-navy">Book a Free In-Home Consultation</a>
+      <a href="contact.html" class="btn btn-navy">Book a Free In-Home Visit</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="logo-icon-transparent.png" alt="Grandnanny" class="footer-brand-logo">
-        <p>Premium in-home senior care across Ontario. Compassion, dignity, and peace of mind for your family.</p>
+        <p>Premium in-home senior care across Ontario, delivered by certified caregivers. Compassion, dignity, and peace of mind for your family.</p>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
@@ -1255,19 +520,107 @@
     </div>
   </footer>
 
-  <!-- SCROLL REVEAL -->
-  <script>
+  <div class="sticky-mobile-bar">
+    <a href="tel:+1234567890" class="btn-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+    <a href="contact.html" class="btn-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book Free Visit</a>
+  </div>
+
+  <button class="chat-fab" onclick="openChat()" aria-label="Chat with us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></button>
+  <div class="chat-overlay" id="chatOverlay" onclick="closeChat()"></div>
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <div class="chat-header-text"><h4>Grandnanny Care Team</h4><p>We typically reply within minutes</p></div>
+      </div>
+      <button class="chat-close" onclick="closeChat()" aria-label="Close chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg agent">Hello! Welcome to Grandnanny. I'm here to help you find the right care for your loved one. What would you like to know?<span class="msg-time">Care Team</span></div>
+    </div>
+    <div class="chat-typing" id="chatTyping">Care specialist is typing...</div>
+    <div class="chat-quick-replies" id="chatQuickReplies">
+      <button class="chat-quick-reply" onclick="sendQuickReply('What services do you offer?')">What services do you offer?</button>
+      <button class="chat-quick-reply" onclick="sendQuickReply('How much does it cost?')">How much does it cost?</button>
+      <button class="chat-quick-reply" onclick="sendQuickReply('Book a consultation')">Book a consultation</button>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendMessage()">
+      <button class="chat-send" onclick="sendMessage()" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    </div>
+  </div>
+
+<script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
     }, { threshold: 0.15 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
 
+    function openChat() {
+      document.getElementById('chatWidget').classList.add('open');
+      document.getElementById('chatOverlay').classList.add('open');
+      document.querySelector('.chat-fab').classList.add('hidden');
+      document.getElementById('chatInput').focus();
+    }
+    function closeChat() {
+      document.getElementById('chatWidget').classList.remove('open');
+      document.getElementById('chatOverlay').classList.remove('open');
+      document.querySelector('.chat-fab').classList.remove('hidden');
+    }
+    const replies = {
+      'services': "We offer four types of in-home care, all delivered by certified caregivers: Personal Care, Companionship, Specialized Care, and Respite Care. Would you like details on any of these?",
+      'cost': "Our care plans are fully personalized, so pricing depends on your loved one's needs. We'd love to discuss it during a free in-home consultation. Shall I help you book one?",
+      'consultation': "Wonderful! Just visit our Contact page to book a free in-home consultation. A senior care specialist will reach out within 24 hours.",
+      'caregiver': "All our caregivers are certified Personal Support Workers — thoroughly vetted and chosen for compassion as much as skill. We also provide regular follow-ups.",
+      'follow': "We provide regular follow-ups with every family — weekly at first, then adjusted to your preference.",
+      'areas': "We serve families across Ontario. Share your location and we'll confirm coverage!",
+      'default': "Thank you for reaching out! I'd recommend visiting our Contact page or calling us at (123) 456-7890. How else can I help?"
+    };
+    function getReply(msg) {
+      const lower = msg.toLowerCase();
+      if (lower.includes('service') || lower.includes('offer')) return replies.services;
+      if (lower.includes('cost') || lower.includes('price')) return replies.cost;
+      if (lower.includes('consult') || lower.includes('book') || lower.includes('visit')) return replies.consultation;
+      if (lower.includes('caregiver') || lower.includes('psw') || lower.includes('worker')) return replies.caregiver;
+      if (lower.includes('follow') || lower.includes('check')) return replies.follow;
+      if (lower.includes('area') || lower.includes('location')) return replies.areas;
+      return replies.default;
+    }
+    function addUserMessage(msg) {
+      const messages = document.getElementById('chatMessages');
+      const userDiv = document.createElement('div');
+      userDiv.className = 'chat-msg user';
+      userDiv.innerHTML = msg + '<span class="msg-time">You</span>';
+      messages.appendChild(userDiv);
+      messages.scrollTop = messages.scrollHeight;
+    }
+    function addAgentReply(msg) {
+      const messages = document.getElementById('chatMessages');
+      const typing = document.getElementById('chatTyping');
+      typing.classList.add('show');
+      setTimeout(() => {
+        typing.classList.remove('show');
+        const replyDiv = document.createElement('div');
+        replyDiv.className = 'chat-msg agent';
+        replyDiv.innerHTML = msg + '<span class="msg-time">Care Team</span>';
+        messages.appendChild(replyDiv);
+        messages.scrollTop = messages.scrollHeight;
+      }, 1200 + Math.random() * 600);
+    }
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+      addUserMessage(msg);
+      input.value = '';
+      document.getElementById('chatQuickReplies').style.display = 'none';
+      addAgentReply(getReply(msg));
+    }
+    function sendQuickReply(msg) {
+      addUserMessage(msg);
+      document.getElementById('chatQuickReplies').style.display = 'none';
+      addAgentReply(getReply(msg));
+    }
+  </script>
 </body>
 </html>
